@@ -10,7 +10,7 @@
     if (isGamePage) {
         // Check if referrer is games.html or if no access has been granted
         const comingFromGamesPage = referrer.includes('games.html');
-        const hasAccess = sessionStorage.getItem('accessGranted');
+        const hasAccess = true;
         
         if (!comingFromGamesPage && hasAccess) {
             // Set a flag to allow returning to this game after redirect
@@ -19,7 +19,7 @@
             window.location.href = '/games.html';
         } else if (!hasAccess) {
             // If no access at all, redirect to login page
-            window.location.href = '/index.html';
+            window.location.href = '/games.html';
         }
     }
 })();
