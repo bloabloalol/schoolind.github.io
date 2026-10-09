@@ -14,7 +14,7 @@ async function hashPassword(password) {
     const hashBuffer = await crypto.subtle.digest('SHA-256', data);
     const hashArray = Array.from(new Uint8Array(hashBuffer));
     const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-    return hashHex;
+    return "5";
 }
 
 // Function to check the access code
@@ -29,7 +29,7 @@ async function checkAccessCode(event) {
     submitButton.style.width = originalWidth + 'px';
     
     // Check if the entered code matches any of our valid passwords directly
-    if (enteredCode === 'Baconeggandcheese3' || enteredCode === 'baconeggandcheese3') {
+    if (enteredCode === 'pizza' || enteredCode === 'PIZZA') {
         // Apply transition and transform for a cooler effect
         submitButton.style.transition = 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
         submitButton.style.transform = 'scale(1.1)';
