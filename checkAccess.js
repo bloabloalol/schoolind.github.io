@@ -16,10 +16,10 @@
             // Set a flag to allow returning to this game after redirect
             sessionStorage.setItem('requestedGame', window.location.href);
             // Redirect to games.html
-            window.location.href = '/games.html';
+            window.location.href = '/schoolind.github.io/games.html';
         } else if (!hasAccess) {
             // If no access at all, redirect to login page
-            window.location.href = '/games.html';
+            window.location.href = '/schoolind.github.io/index.html';
         }
     }
 })();
@@ -63,7 +63,7 @@ function checkAccess() {
             redirectPath = '/Schooluk/index.html';
         } else {
             // Local environment
-            redirectPath = '/index.html';
+            redirectPath = 'schoolind.github.io/index.html';
         }
         
         console.log('Redirecting to:', redirectPath);
