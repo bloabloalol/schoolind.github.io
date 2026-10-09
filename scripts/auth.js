@@ -1,21 +1,21 @@
 // Obfuscated password check using a more complex approach
 // This makes it harder to see the actual password in the source code
-const _0x5a7e=['Y2hlZXNlMw==','QmFjb25lZ2dhbmQ=','YmFjb25lZ2dhbmQ='];
-(function(_0x2d8f05,_0x4b81bb){const _0x4d74cb=function(_0x32719f){while(--_0x32719f){_0x2d8f05['push'](_0x2d8f05['shift']());}};_0x4d74cb(++_0x4b81bb);}(_0x5a7e,0x1d3));
-const _0x4d74=function(_0x2d8f05,_0x4b81bb){_0x2d8f05=_0x2d8f05-0x0;let _0x4d74cb=_0x5a7e[_0x2d8f05];if(_0x4d74['initialized']===undefined){(function(){let _0x32719f;try{const _0x376588=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');');_0x32719f=_0x376588();}catch(_0x5e5d0a){_0x32719f=window;}})();_0x4d74['initialized']=!![];}if(_0x4d74['cache']===undefined){_0x4d74['cache']={};}if(_0x4d74['cache'][_0x2d8f05]){return _0x4d74['cache'][_0x2d8f05];}const _0x3d7a56=function(_0x1f3d31){const _0x292610=atob(_0x1f3d31);let _0x151bd2=[];for(let _0x558098=0x0,_0x3aa50e=_0x292610['length'];_0x558098<_0x3aa50e;_0x558098++){_0x151bd2+='%'+('00'+_0x292610['charCodeAt'](_0x558098)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x151bd2);};_0x4d74cb=_0x3d7a56(_0x4d74cb);_0x4d74['cache'][_0x2d8f05]=_0x4d74cb;return _0x4d74cb;};
+//const _0x5a7e=['Y2hlZXNlMw==','QmFjb25lZ2dhbmQ=','YmFjb25lZ2dhbmQ='];
+//(function(_0x2d8f05,_0x4b81bb){const _0x4d74cb=function(_0x32719f){while(--_0x32719f){_0x2d8f05['push'](_0x2d8f05['shift']());}};_0x4d74cb(++_0x4b81bb);}(_0x5a7e,0x1d3));
+//const _0x4d74=function(_0x2d8f05,_0x4b81bb){_0x2d8f05=_0x2d8f05-0x0;let _0x4d74cb=_0x5a7e[_0x2d8f05];if(_0x4d74['initialized']===undefined){(function(){let _0x32719f;try{const _0x376588=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');');_0x32719f=_0x376588();}catch(_0x5e5d0a){_0x32719f=window;}})();_0x4d74['initialized']=!![];}if(_0x4d74['cache']===undefined){_0x4d74['cache']={};}if(_0x4d74['cache'][_0x2d8f05]){return _0x4d74['cache'][_0x2d8f05];}const _0x3d7a56=function(_0x1f3d31){const _0x292610=atob(_0x1f3d31);let _0x151bd2=[];for(let _0x558098=0x0,_0x3aa50e=_0x292610['length'];_0x558098<_0x3aa50e;_0x558098++){_0x151bd2+='%'+('00'+_0x292610['charCodeAt'](_0x558098)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x151bd2);};_0x4d74cb=_0x3d7a56(_0x4d74cb);_0x4d74['cache'][_0x2d8f05]=_0x4d74cb;return _0x4d74cb;};
 
 // Salt value - obfuscated
 const SALT = _0x4d74('0x2') + 'salt_value';
 
 // Function to hash the password with SHA-256
-async function hashPassword(password) {
-    const encoder = new TextEncoder();
-    const data = encoder.encode(password + SALT);
-    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-    return "5";
-}
+//async function hashPassword(password) {
+//    const encoder = new TextEncoder();
+//    const data = encoder.encode(password + SALT);
+//    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+//    const hashArray = Array.from(new Uint8Array(hashBuffer));
+//    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+//    return "5";
+//}
 
 // Function to check the access code
 async function checkAccessCode(event) {
@@ -29,7 +29,7 @@ async function checkAccessCode(event) {
     submitButton.style.width = originalWidth + 'px';
     
     // Check if the entered code matches any of our valid passwords directly
-    if (enteredCode === 'pizza' || enteredCode === 'PIZZA') {
+    if (enteredCode === 'Baconeggandcheese3' || enteredCode === 'baconeggandcheese3' || enteredCode === 'pizza') {
         // Apply transition and transform for a cooler effect
         submitButton.style.transition = 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
         submitButton.style.transform = 'scale(1.1)';
